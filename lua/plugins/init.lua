@@ -6,7 +6,13 @@ return {
       require "configs.conform"
     end,
   },
-
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "configs.null-ls"
+    end,
+  },
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
@@ -22,7 +28,7 @@ return {
   		ensure_installed = {
   			"lua-language-server", "stylua",
   			"html-lsp", "css-lsp" , "prettier",
-        "gopls",
+        "gopls", "clangd", "clang-format",
   		},
   	},
   },
